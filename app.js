@@ -6,17 +6,17 @@ const path = require("path");
 
 
 const httpPort = 8000;
-const httpsPort = 7421;
+//const httpsPort = 7421;
 
 const app = express();
 
-var options = {
+/*var options = {
   key: fs.readFileSync("server.key"),
   cert: fs.readFileSync("server.crt"),
-};
+};*/
 
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(options,app);
+//const httpsServer = https.createServer(options,app);
 
 app.set("view engine", "pug");
 
@@ -35,9 +35,9 @@ httpServer.listen(httpPort, "127.0.0.1", function () {
   console.log(`Listening on port ${httpPort}`);
 });
 
-httpsServer.listen(httpsPort, "127.0.0.1", function () {
+/*httpsServer.listen(httpsPort, "127.0.0.1", function () {
   console.log(`Listening on port ${httpsPort}`);
-});
+});*/
 
 
 
